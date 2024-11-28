@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificação de Próximo Atendimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Próximo Atendimento</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="senha.html">Retirada de Senhas</a>
+            <a href="atendimento.html">Atendimento</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="proximo-atendimento">
+            <h2>Próxima Senha a Ser Chamada</h2>
+            <p id="senhaProxima">A02</p>
+        </section>
+    </main>
+
+    <script>// Exemplo para exibir próxima senha
+        let senhaProxima = 2;
+        document.getElementById("senhaProxima").textContent = `A${senhaProxima.toString().padStart(2, '0')}`;
+        </script>
+</body>
+</html>

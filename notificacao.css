@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffebee;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #e57373;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+#senhaProxima {
+    font-size: 2em;
+    color: #d32f2f;
+    margin: 20px 0;
+}

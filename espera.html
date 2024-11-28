@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempo de Espera</title>
+    <link rel="stylesheet" href="espera.css">
+</head>
+<body>
+    <header>
+        <h1>Tempo de Espera</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="senha.html">Retirada de Senhas</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tempo-espera">
+            <h2>Tempo de Espera Estimado</h2>
+            <p id="esperaEstimada">5 minutos</p>
+        </section>
+    </main>
+
+    <script>let tempoMedioEspera = 5; // Tempo médio em minutos (exemplo)
+        document.getElementById("esperaEstimada").textContent = `${tempoMedioEspera} minutos`;
+        </script>
+</body>
+</html>

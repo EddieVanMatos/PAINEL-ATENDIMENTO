@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e3f2fd;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1e88e5;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+#informacoes-empresa h2 {
+    color: #1565c0;
+}
+
+#informacoes-empresa p {
+    color: #0d47a1;
+    margin: 10px 0;
+}

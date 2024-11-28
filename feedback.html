@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback de Atendimento</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <header>
+        <h1>Feedback de Atendimento</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="senha.html">Retirada de Senhas</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="feedback">
+            <h2>Deixe seu Feedback</h2>
+            <form id="formFeedback">
+                <label for="comentario">Comentário:</label>
+                <textarea id="comentario" name="comentario" required></textarea>
+                <button type="submit">Enviar Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <script>document.getElementById("formFeedback").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const comentario = document.getElementById("comentario").value;
+        alert(`Feedback enviado: ${comentario}`);
+    });
+    </script>
+</body>
+</html>

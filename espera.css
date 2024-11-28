@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff3e0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+#esperaEstimada {
+    font-size: 2em;
+    color: #e65100;
+    margin: 20px 0;
+}

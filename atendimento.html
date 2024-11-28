@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento por Senhas</title>
+    <link rel="stylesheet" href="atendimento.css">
+</head>
+<body>
+    <header>
+        <h1>Atendimento por Senhas</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="senha.html">Retirada de Senhas</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="chamada-atual">
+            <h2>Senha Atual</h2>
+            <p id="senhaChamando">A01</p>
+            <button id="proximaSenha">Próxima Senha</button>
+        </section>
+    </main>
+
+    <script>let senhaAtual = 1;
+
+        document.getElementById("proximaSenha").addEventListener("click", () => {
+            senhaAtual++;
+            document.getElementById("senhaChamando").textContent = `A${senhaAtual.toString().padStart(2, '0')}`;
+        });
+        </script>
+</body>
+</html>

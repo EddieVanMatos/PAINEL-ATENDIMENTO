@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Atendimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Painel de Atendimento</h1>
+        <nav>
+            <a href="senha.html">Retirada de Senhas</a>
+            <a href="atendimento.html">Atendimento por Senhas</a>
+            <a href="data-hora.html">Data e Hora</a>
+            <a href="espera.html">Tempo de Espera</a>
+            <a href="notificacao.html">Próximo Atendimento</a>
+            <a href="empresa.html">Informações da Empresa</a>
+            <a href="agendamento.html">Agendamento</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Retirada de Senhas -->
+        <section id="senha-area">
+            <h2>Retire sua Senha</h2>
+            <button id="retirarSenha">Retirar Senha</button>
+            <p id="senhaAtual"></p>
+        </section>
+
+        <!-- Atendimento por Senhas -->
+        <section id="chamada-atual">
+            <h2>Senha Atual</h2>
+            <p id="senhaChamando">A01</p>
+            <button id="proximaSenha">Próxima Senha</button>
+        </section>
+
+
+
+        <!-- Vídeos/Notícias -->
+        <section id="videos">
+            <h2>Vídeos/Notícias</h2>
+            <div class="owl-carousel" id="videoCarousel">
+
+                <div class="item"><video src="video3.mp4" autoplay loop muted></video></div>
+            </div>
+            <div id="date-time">
+                <p>Data: <span id="current-date"></span></p>
+                <p>Hora: <span id="current-time"></span></p>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function atualizarHora() {
+    const dataAtual = new Date();
+    document.getElementById('current-date').textContent = dataAtual.toLocaleDateString();
+    document.getElementById('current-time').textContent = dataAtual.toLocaleTimeString();
+}
+
+setInterval(atualizarHora, 1000);
+        // Função para retirar senha
+        document.getElementById("retirarSenha").addEventListener("click", () => {
+            let senha = "A" + Math.floor(Math.random() * 100);
+            document.getElementById("senhaAtual").textContent = `Sua senha é: ${senha}`;
+        });
+
+        
+
+        // Função para avançar para a próxima senha
+        let senhaAtual = 1;
+        document.getElementById("proximaSenha").addEventListener("click", () => {
+            senhaAtual++;
+            document.getElementById("senhaChamando").textContent = `A${senhaAtual.toString().padStart(2, '0')}`;
+        });
+
+        // Exibir próxima senha
+        let senhaProxima = 2;
+        document.getElementById("senhaProxima").textContent = `A${senhaProxima.toString().padStart(2, '0')}`;
+
+            // Slide automático do carrossel de vídeos
+            let currentSlide = 0;
+        const carouselItems = document.querySelectorAll('#videoCarousel .item');
+        const totalSlides = carouselItems.length;
+
+        function showSlide(index) {
+            // Calcula o índice do slide a ser exibido
+            const offset = -index * 100; // Deslocamento baseado na largura do item
+            carouselItems.forEach(item => item.style.transform = `translateX(${offset}%)`);
+        }
+
+        // Função para mover para o próximo slide
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Definir o intervalo para o slide automático
+        setInterval(nextSlide, 5000); // Troca a cada 5 segundos
+
+        // Exibir o primeiro slide ao carregar
+        showSlide(currentSlide);
+        
+    </script>
+
+    <script src="js/main.js"></script>
+</body> 
+</html>

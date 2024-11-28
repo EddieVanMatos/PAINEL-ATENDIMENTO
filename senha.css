@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9f7ef;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #34c38f;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+ 
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #34c38f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2e8b57;
+}
+
+#senhaDisplay {
+    font-size: 2em;
+    color: #2e8b57;
+    margin: 20px 0;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data e Hora Atual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Data e Hora Atual</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="senha.html">Retirada de Senhas</a>
+            <a href="atendimento.html">Atendimento</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="data-hora">
+            <h2>Data e Hora</h2>
+            <p id="dataHoraAtual"></p>
+        </section>
+    </main>
+
+    <script>function atualizarDataHora() {
+        const dataHora = new Date().toLocaleString();
+        document.getElementById("dataHoraAtual").textContent = dataHora;
+    }
+    
+    setInterval(atualizarDataHora, 1000); // Atualiza a cada segundo
+    </script>
+</body>
+</html>

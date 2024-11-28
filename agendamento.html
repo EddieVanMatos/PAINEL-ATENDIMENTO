@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Atendimento</title>
+    <link rel="stylesheet" href="agendamento.css">
+</head>
+<body>
+    <header>
+        <h1>Agendamento de Atendimento</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="senha.html">Retirada de Senhas</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="agendamento">
+            <h2>Agende seu Atendimento</h2>
+            <form id="formAgendamento">
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+                
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+                
+                <button type="submit">Agendar</button>
+            </form>
+        </section>
+    </main>
+
+    <script>document.getElementById("formAgendamento").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const data = document.getElementById("data").value;
+        const hora = document.getElementById("hora").value;
+        alert(`Atendimento agendado para ${data} às ${hora}.`);
+    });
+    </script>
+</body>
+</html>

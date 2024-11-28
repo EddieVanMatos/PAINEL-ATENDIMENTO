@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9fbe7;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #8bc34a;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    color: #558b2f;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #8bc34a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #689f38;
+}
